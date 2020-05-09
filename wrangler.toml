@@ -1,7 +1,7 @@
 name = "fun"
 type = "webpack"
-account_id = ""
+account_id = "f9b1e1e2cf50cca79a58e395b6084239"
 workers_dev = true
 route = ""
-zone_id = ""
+zone_id = "756273be2b208c5444aefc6d8efe8e63"
 webpack_config = "webpack.config.js"
