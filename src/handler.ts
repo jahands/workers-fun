@@ -1,7 +1,6 @@
 import { Router } from './router'
-
+const r = new Router()
 export async function handleRequest(request: Request): Promise<Response> {
-  const r = new Router()
   // Replace with the approriate paths and handlers
   r.get('.*/bar', () => new Response('responding for /bar'))
   r.get('.*/foo', request => handler(request))
