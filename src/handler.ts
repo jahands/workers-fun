@@ -3,9 +3,9 @@ const r = new Router()
 export async function handleRequest(request: Request): Promise<Response> {
   // Replace with the approriate paths and handlers
   r.get('.*/bar', () => new Response('responding for /bar'))
-  r.get('.*/foo', request => handler(request))
-  r.post('.*/foo.*', request => handler(request))
-  r.get('/demos/router/foo', request => fetch(request)) // return the response from the origin
+  r.get('.*/foo', (request: Request) => handler(request))
+  r.post('.*/foo.*', (request: Request) => handler(request))
+  r.get('/demos/router/foo', (request: Request) => fetch(request)) // return the response from the origin
 
   r.get('/', () => new Response('Hello worker!')) // return a default message for the root route
 
@@ -13,7 +13,7 @@ export async function handleRequest(request: Request): Promise<Response> {
   return resp
 }
 
-function handler(request) {
+function handler(request: Request) {
   const init = {
     headers: { 'content-type': 'application/json' },
   }
