@@ -29,5 +29,7 @@
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.6"
   },
-  "dependencies": {}
+  "dependencies": {
+    "tiny-request-router": "^1.2.2"
+  }
 }
